@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopPing</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+
+            <div class="header-top py-1">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6 col-sm-4">
+                            <div class="header-phone d-flex align-items-center h-100">
+                                <i class="fa-solid fa-square-phone"></i>
+                                <a href="tel:+79951941648" class="ms-2">+7-995-194-16-48</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 d-none d-sm-block">
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-4">
+                            <div class="header-top-account d-flex justify-content-end">
+                                <div class="btn-group me-2">
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Аккаунт
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Войти</a></li>
+                                            <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="header-top-account d-flex justify-content-end">
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Рус.
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Анг.</a></li>
+                                            <li><a class="dropdown-item" href="#">Нем.</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- ./header-top -->
+
+            <div class="header-middle bg-white py-4">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+
+                        <div class="col-sm-6 col-lg-4">
+                            <a href="index.html" class="header-logo h1">ShopPing</a>
+                        </div>
+
+                        <div class="col-lg-4 order-md-2 cart-buttons text-end d-none d-lg-block">
+                            <a href="#" class="btn p-1">
+                                <i class="fa-solid fa-heart-circle-plus"></i>
+                                <span class="badge text-bg-light cart-badge bg-light rounded-circle">0</span>
+                            </a>
+                            <button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span class="badge text-bg-light cart-badge bg-light rounded-circle">0</span>
+                            </button>
+
+
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6 order-md-1 mt-2">
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="s" placeholder="Поиск товара..."
+                                        aria-label="Recipient's username" aria-describedby="button-search">
+                                    <button class="btn btn-outline-primary" type="submit" id="button-search"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div><!-- ./header-middle -->
+
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasCartLabel">Корзина</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div>
+                    Здесь вы можете увидеть содержимое вашей корзины. Приятных покупок!
+                  </div>
+                  <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                      Меню корзины
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Оформить покупки</a></li>
+                      <li><a class="dropdown-item" href="#">Сравнить товары</a></li>
+                      <li><a class="dropdown-item" href="#">Очистить корзину</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+        </header>
+
+        <div class="header-bottom sticky-top">
+            <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-start" id="offcanvasNavbar" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Каталог</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Домашняя</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">О нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Контакты</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Платежи</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Доставка</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                        Каталог
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Обувь</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Джинсы</a>
+                                        </li>
+                                        <li class="nav-item dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Спортивная одежда</a>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Мужская спортивная одежда</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Женская спортивная одежда</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Детская спортивная одежда</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Пальто</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Рубашки</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="d-block d-lg-none">
+                        <a href="#" class="btn p-1">
+                            <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+                            <span class="badge text-bg-light cart-badge bg-light rounded-circle">0</span>
+                        </a>
+                        <button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                            <i class="fa-sharp fa-solid fa-cart-arrow-down" style="color: #ffffff;"></i>
+                            <span class="badge text-bg-light cart-badge bg-light rounded-circle">0</span>
+                        </button>
+                    </div>
+
+                </div>
+            </nav>
+        </div><!-- ./header-bottom -->
+
+        <main class="main">
+           <h1>Главная страница нашего магазина</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, facere vel? Sapiente ad ipsa odit veniam molestias dolore dignissimos ducimus corporis fugiat. Animi nobis cupiditate quisquam molestiae, natus cum facere.</p>
+           <p>Vel alias consequuntur ex facere, corrupti suscipit blanditiis soluta! Veritatis voluptatem consequatur, suscipit eveniet ab asperiores corrupti exercitationem nobis laudantium, placeat quasi numquam facere dolorum vel maxime quis dicta ipsa?</p>
+           <p>Eaque tempora deleniti adipisci reprehenderit modi deserunt, ut repudiandae, corrupti quibusdam numquam, repellendus molestiae. Corrupti sit ea fugiat ullam voluptatum id dolor facere. Id officiis repudiandae corporis. Cumque, ad blanditiis!</p>
+           <p>Excepturi accusantium atque eveniet? Neque ea voluptatum reiciendis temporibus in a, minus eius, maxime culpa aspernatur quibusdam fugit laudantium nostrum cupiditate veritatis. Ex dolorem cumque, voluptates error culpa eligendi molestiae!</p>
+           <p>Sint dolore omnis eveniet asperiores sunt repudiandae, ullam id quasi eaque laudantium maiores aperiam et tempore amet veniam doloremque reiciendis distinctio. Enim debitis rem consequatur recusandae, eos doloremque cupiditate eveniet!</p>
+           <p>At dolore laboriosam consequatur aperiam assumenda. Illum, et dolorem? Consectetur quibusdam perferendis commodi possimus natus maiores magni ipsam quia hic veritatis soluta error minima, voluptatibus deserunt, ut ad at illum.</p>
+           <p>Quibusdam ratione architecto quidem magni amet aperiam minus molestias, rem expedita velit nam harum, provident illo suscipit, excepturi blanditiis id in. Quam, ab! Officiis atque deserunt consequatur! Eum, illum unde.</p>
+           <p>Quis, eveniet sint natus vitae similique, ipsum doloremque libero fugiat laboriosam beatae earum quaerat ipsam et aliquid veritatis consectetur fuga reprehenderit laudantium expedita? Dolorum sunt obcaecati consectetur provident molestiae harum?</p>
+           <p>Aut, impedit. Vel id maxime hic est, labore recusandae blanditiis quo? Laborum, enim aut perspiciatis nostrum error minus vel itaque voluptatem adipisci aspernatur sequi, nulla eum exercitationem iure? Necessitatibus, voluptatem?</p>
+           <p>Fugiat obcaecati minima, fuga eum atque, nobis mollitia provident temporibus inventore repudiandae et, veniam labore iusto ipsum eligendi quibusdam. Odio voluptates corrupti illo ad vel, reprehenderit corporis consectetur! Velit, id.</p>
+           <p>Excepturi praesentium, repellendus maxime, cum quasi tempore earum, atque ut tempora ipsum dicta? Fuga, tempora praesentium. Porro natus tempore harum, itaque magnam facere, molestias commodi voluptatibus, hic ad possimus ea.</p>
+           <p>Veritatis, asperiores voluptates illum totam maxime animi quod eius expedita vel exercitationem nam autem reiciendis quia esse aliquid explicabo harum hic quam? Rerum accusantium perspiciatis voluptatem, sunt quisquam consequatur obcaecati.</p>
+           <p>Nisi eum vero impedit voluptatum animi excepturi est rerum minima laborum sit quidem recusandae quas, veniam suscipit voluptatibus nulla, ad aut fugit? Recusandae accusantium corrupti molestiae magni id. Omnis, facilis.</p>
+           <p>Dignissimos libero quia soluta sequi, inventore accusamus! Sit vel similique, dolore aperiam vero libero magnam numquam impedit esse pariatur fugit consectetur qui cupiditate unde vitae minus animi quae, neque placeat?</p>
+           <p>Totam, cumque non! Tempore tenetur odio laborum illum autem, eveniet blanditiis nisi dolor et, maiores debitis consequuntur velit rerum! Hic dolor aspernatur porro numquam aliquid dolorum ipsa repellendus, sequi corporis?</p>
+           <p>Non ipsum similique animi praesentium fugit nam laudantium ut dolorem expedita architecto nesciunt nihil libero vel sit quaerat unde voluptatum asperiores, voluptatibus porro quisquam sint numquam, tempore et neque? Deserunt?</p>
+           <p>Dolorem commodi magnam sunt quia voluptatum distinctio molestias tempore, aut ullam animi! Dignissimos nam ut, sequi alias fugiat, ad expedita voluptates et esse eligendi vero, laborum deleniti quo. Ratione, in.</p>
+           <p>Non, a quo pariatur sapiente in libero asperiores, iste impedit quaerat quos illum repellat vero eaque? Recusandae reprehenderit, ab cupiditate consectetur unde vel exercitationem eaque, dolor eos voluptas minima at.</p>
+           <p>Labore libero nam a. Molestias placeat cupiditate ipsa quae repellendus velit inventore esse optio at. Fuga neque, quam doloribus nam placeat tempore pariatur similique corrupti totam, suscipit laboriosam vitae nesciunt.</p>
+           <p>Numquam, iusto in. Repellat, itaque eius nobis consequatur minima harum vel exercitationem quis, pariatur adipisci blanditiis iure voluptatem rem, perspiciatis quo mollitia provident ab minus odit. Placeat id labore aliquid.</p>
+        </main>
+
+        <footer class="footer">
+            <p>Все права защищены <i class="fa-regular fa-copyright"></i></p>
+        </footer>
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/scripts.js"></script>
+</body>
+
+</html>
