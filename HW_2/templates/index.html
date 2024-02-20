@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+<div class="header-middle bg-white py-2">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+
+            <div class="col-sm-6 col-lg-4">
+                <p>
+                <h2>{{ message }} На этой странице, вы видите форму для ввода имени и электронной почты:</h2> <br>
+                - при отправке введённых данных будет создан cookie-файл с именем и e-mail пользователя, <br>
+                - а также вы будете перенаправлены на страницу приветствия, где будет отображаться имя пользователя.</p>
+                <br>
+                <button class="btn btn-primary"><a href="{{ url_for('logout')}}">Разлогиниться</a></button>
+                </p>
+            </div>
+
+            <div class="col-lg-4 order-md-2 cart-buttons text-home d-none d-lg-block">
+                <img src="{{ url_for('static', filename='img/img_1.jpg')}}" alt="some-picture">
+
+            </div>
+
+            <div class="col-lg-4 col-sm-6 order-md-1 mt-2">
+                <form action="/hello" method="post">
+
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}">
+                                   {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+
+                    <div>
+                        <label for="exampleInputUser" class="form-label">Пользователь</label>
+                        <input type="user" name="name" placeholder="Имя" class="form-control" id="exampleInputUser">
+                    </div>
+                    <div>
+                        <label for="exampleInputEmail" class="form-label">Email адрес:</label>
+                        <input type="email" name="email" placeholder="email" class="form-control" id="exampleInputEmail"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Мы никогда не передадим ваш адрес электронной почты
+                            кому-либо еще.</div>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Отправить">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div><!-- ./end-form -->
+
+
+{% endblock %}

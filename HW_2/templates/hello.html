@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+    {{ super() }} - {{ title }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center">
+
+            <div class="col-sm-6 col-lg-4">
+                <p>
+                <h2>Добро пожаловать в проект:</h2> <br>
+                - cookie-файл с именем и e-mail пользователя создан <br>
+                <br>
+                <button class="btn btn-primary"><a href="{{ url_for('logout')}}">Разлогиниться</a></button>
+                </p>
+            </div>
+
+            <div class="col-lg-4 order-md-2 cart-buttons text-home d-none d-lg-block py-2">
+                <img src="{{ url_for('static', filename='img/img_1.jpg')}}" alt="some-picture">
+
+            </div>
+
+            <div class="col-lg-4 col-sm-6 order-md-1 mt-2">
+                <h5>
+                    {{ username }}
+                    <br>
+                    <br>
+                    {{ usermail }}
+                </h5>
+            </div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+
+{% endblock %}
