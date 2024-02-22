@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="header-middle bg-white py-4">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+
+            <div class="col-sm-6 col-lg-6 order-md-2 text-home">
+                <h1>Приветствую тебя {{ username }}!!!</h1>
+                <button class="btn btn-primary"><a href="{{ url_for('logout')}}">Выйти</a></button>
+            </div>
+
+            <div class="col-lg-6 order-md-1 cart-buttons d-none d-lg-block">
+                <img src="{{ url_for('static', filename='img/img_2.jpg')}}" alt="some-picture" width="80%">
+            </div>
+
+        </div>
+    </div>
+
+</div><!-- ./end-form -->
+
+{% endblock %}
