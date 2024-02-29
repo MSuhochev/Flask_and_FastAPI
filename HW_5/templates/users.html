@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        {% block title %}
+
+        {{ title }}
+    
+    {% endblock %}
+</title>
+
+</head>
+<body>
+    
+    {% block content %}
+
+<div>
+
+    
+    <h2>Список пользователей:</h2> <br>
+    <p>
+        <button>
+            <a href="http://127.0.0.1:8000/docs#/default/create_user_users_post"
+               target="_blank">Добавить пользователя в БД</a>
+        </button>
+    </p>
+    <p>
+        <button>
+            <a href="http://127.0.0.1:8000/docs#/default/update_user_users__user_id__put"
+               target="_blank">Обновить данные пользователя в БД</a>
+        </button>
+    </p>
+    <p>
+        <button>
+            <a href="http://127.0.0.1:8000/docs#/default/delete_user_users__user_id__delete"
+               target="_blank">Удалить пользователя из БД</a>
+        </button>
+    </p>
+
+    - {% for user in users %}
+        ID: {{ user.id }}<br>
+        Name: {{ user.name }}<br>
+        Email: {{ user.email }}<br>
+        Password: {{ user.password }}<br>
+        <br>
+    {% endfor %} <br>
+    
+</div>
+
+{% endblock %}
+
+</body>
+</html>
+
+
+
+
